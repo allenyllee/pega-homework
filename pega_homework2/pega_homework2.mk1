@@ -1,0 +1,17 @@
+!define BLANK ""
+D:\Pega-Allen\Code_Project\pega_homework2\pega_homework2.obj : D:\Pega-Allen&
+\Code_Project\pega_homework2\pega_homework2.c .AUTODEPEND
+ @D:
+ cd D:\Pega-Allen\Code_Project\pega_homework2
+ *wcc386 pega_homework2.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -6r -bt=dos &
+-fo=.obj -mf
+
+D:\Pega-Allen\Code_Project\pega_homework2\pega_homework2.exe : D:\Pega-Allen&
+\Code_Project\pega_homework2\pega_homework2.obj .AUTODEPEND
+ @D:
+ cd D:\Pega-Allen\Code_Project\pega_homework2
+ @%write pega_homework2.lk1 FIL pega_homework2.obj
+ @%append pega_homework2.lk1 
+ *wlink name pega_homework2 d all sys dos4g op m op maxe=25 op q op symf @pe&
+ga_homework2.lk1
+
