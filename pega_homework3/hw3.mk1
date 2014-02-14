@@ -1,0 +1,16 @@
+!define BLANK ""
+D:\Pega-Allen\Code_Project\pega_homework\pega_homework3\hw3.obj : D:\Pega-Al&
+len\Code_Project\pega_homework\pega_homework3\hw3.c .AUTODEPEND
+ @D:
+ cd D:\Pega-Allen\Code_Project\pega_homework\pega_homework3
+ *wcc386 hw3.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -6r -bt=dos -fo=.obj -m&
+f
+
+D:\Pega-Allen\Code_Project\pega_homework\pega_homework3\hw3.exe : D:\Pega-Al&
+len\Code_Project\pega_homework\pega_homework3\hw3.obj .AUTODEPEND
+ @D:
+ cd D:\Pega-Allen\Code_Project\pega_homework\pega_homework3
+ @%write hw3.lk1 FIL hw3.obj
+ @%append hw3.lk1 
+ *wlink name hw3 d all sys dos4g op m op maxe=25 op q op symf @hw3.lk1
+
