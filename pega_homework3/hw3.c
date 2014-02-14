@@ -18,7 +18,7 @@ int main(void){
 				if(transmitted != 0xFFFFFFFF){
 					VendorID = transmitted & 0x0000FFFF;
 					DeviceID = transmitted >> 16;
-					printf("     %04X\t     %04X\t  %02d\t  %02d\t   %02d\n",VendorID, DeviceID, bus, dev, func);
+					printf("   0x%04X\t   0x%04X\t  %02d\t  %02d\t   %02d\n",VendorID, DeviceID, bus, dev, func);
 				}
 			}
 		}
