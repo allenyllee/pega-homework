@@ -129,7 +129,7 @@ int main(int argc, char* argv[]){
 	io_space_Addr = (PMBASE + 0x02);
 	outpw(io_space_Addr, inpw(io_space_Addr) | RTC_EN);
 	
-	printf("shot down? y/n: ");
+	printf("Shutdown? y/n: ");
 	
 	while(1){
 		command = getchar();
