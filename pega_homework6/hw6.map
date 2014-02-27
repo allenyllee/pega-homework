@@ -1,6 +1,6 @@
 Open Watcom Linker Version 1.9
 Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
-Created on:       14/02/27 14:45:12
+Created on:       14/02/27 16:52:52
 Executable Image: hw6.exe
 creating a DOS/32 Advanced DOS Extender (LE-style) executable
 
@@ -57,10 +57,10 @@ Address        Symbol
 Module: hw6.obj(D:\Pega-Allen\Code_Project\pega_homework\pega_homework6\hw6.c)
 0001:00000010  main_
 Module: C:\WATCOM/lib386/dos\clib3r.lib(stk)
-0001:000001af* __STK
-0001:0000019c  __CHK
-0001:000001ac* __GRO
-0001:000001cd* __STKOVERFLOW_
+0001:000001ab* __STK
+0001:00000198  __CHK
+0001:000001a8* __GRO
+0001:000001c9* __STKOVERFLOW_
 Module: C:\WATCOM/lib386/dos\clib3r.lib(outpd.c)
 0001:000001e0  outpd_
 Module: C:\WATCOM/lib386/dos\clib3r.lib(inpd.c)
@@ -355,4 +355,4 @@ C:\WATCOM/lib386/dos\emu387.lib
 Stack size:  00010000 (65536.)
 Memory size:  00017bab (97195.)
 Entry point address: 0001:000002c4
-Link time: 00:00.63
+Link time: 00:00.31

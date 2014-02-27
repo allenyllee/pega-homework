@@ -29,28 +29,28 @@ int main(void){
 	outpd(IO_PCI_CONFIG_ADDR, pci_config_addr);
 	pci_config_data = inpd(IO_PCI_CONFIG_DATA);
 	
-	gpio_base = pci_config_data & 0xFFFE;
+	gpio_base = pci_config_data & 0xFFFFFFFE;
 	
 	gpio_func = gpio_base + GPIO_USE_SEL;
-	gpio_set = 0x0400;
+	gpio_set = 0x00400000;
 	outpd(gpio_func, inpd(gpio_func) | gpio_set );
 	
 	gpio_func = gpio_base + GP_IO_SEL;
-	gpio_set = 0xFBFF;
+	gpio_set = 0xFFBFFFFF;
 	outpd(gpio_func, inpd(gpio_func) & gpio_set );
 	
 	gpio_func = gpio_base + GP_LVL;
-	gpio_set = 0x0400;
+	gpio_set = 0x00400000;
 	
 	while(1){
 		time = clock();
 		
-		if(gpio_set == 0x0400){
-			gpio_set = 0xFBFF;
+		if(gpio_set == 0x00400000){
+			gpio_set = 0xFFBFFFFF;
 			outpd(gpio_func, inpd(gpio_func) & gpio_set );
 			printf("light off\n");
-		}else if(gpio_set == 0xFBFF){
-			gpio_set = 0x0400;
+		}else if(gpio_set == 0xFFBFFFFF){
+			gpio_set = 0x00400000;
 			outpd(gpio_func, inpd(gpio_func) | gpio_set );
 			printf("light on\n");
 		}
